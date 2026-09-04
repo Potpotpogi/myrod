@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Rod</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            color: #00ccff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+#myImage {
+    display: none;
+    width: 300px;
+    margin: 20px auto 0;
+    border-radius: 10px;
+}
+
+#myImage.show {
+    display: block;
+    animation: popUp 0.8s ease-out;
+}
+
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) rotate(-10deg);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to My ROD</h1>
+        <p>My first broken and I cried</p>
+    </header>
+
+    <nav>
+        <a href="#">ROD</a>
+        <a href="#">PATRICK</a>
+        <a href="#">DIAZ</a>
+    </nav>
+
+    <div class="container">
+    <h2>Hello!</h2>
+
+    <p>
+        ROD BROKEN
+    </p>
+
+    <a href="#" class="button" onclick="playSound(); showImage(); return false;">
+        Click Me
+    </a>
+
+    <audio id="mySound" src="click.mp3"></audio>
+
+    <img
+        <img id="myImage" src="image.jpg" alt="My Image">
+
+    >
+</div>
+
+<script>
+    function playSound() {
+        document.getElementById("mySound").currentTime = 0;
+        document.getElementById("mySound").play();
+    }
+
+    function showImage() {
+        document.getElementById("myImage").classList.add("show");
+    }
+</script>
+
+
+</body>
+</html>
